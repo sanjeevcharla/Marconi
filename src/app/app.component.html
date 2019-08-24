@@ -1,0 +1,71 @@
+<div class="app">
+  <div>
+    <div class="scaleHolder">
+      <div class="scale">
+        <div class="dial">
+          <div class="stationsList" id="stationsList">
+            <div class="languageRow" *ngFor="let languageStations of stationsList | keyvalue;let i = index">
+              <span class="stationLanguage" id="lang_{{i}}" [attr.data-lang]="i">
+                {{languageStations.key}}
+              </span>
+              <span class="station" *ngFor="let station of languageStations.value"
+                    [attr.data-url]="station.URL"
+                    [attr.data-name]="station.Name">
+                {{station.Name}}
+              </span>
+            </div>
+          </div>
+          <div id="needle" [style.left.px]="needleLeft">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="controlPanel">
+    <div class="jogdial">
+      <span class="labelText tuningLabel">
+        TUNING - {{languageName}}
+      </span>
+      <div id="jog_dial_example"></div>
+    </div>
+    <div id="sliderPanel">
+      <div class="controlHolder">
+        <span class="labelText volumeLabel">VOLUME</span> <input type="range" min="0" max="1" step="0.1" [(ngModel)]="volume" />
+      </div>
+      <div class="controlHolder">
+        <span class="labelText volumeLabel">LANGUAGE</span> <input type="range" min="0" max="2" step="1" [(ngModel)]="language" />
+      </div>
+    </div>
+  </div>
+
+  <div id="brandingPanel">
+    <div class="logo">Marconi</div>
+    <div class="logoText">Internet powered Vintage Radio</div>
+    <div class="helpInfo">
+      Tune in to your favorite Online radio stations like BBC, AIR and other streams and listen in your favorite language.
+    </div>
+    <div class="indicatorHolder">
+      <!--<canvas style="width:300px;height:150px"></canvas>-->
+      <img src="assets/img/vu.gif" *ngIf="playing" class="indicator" />
+      <img src="assets/img/vu.png" *ngIf="!playing" class="indicator" />
+    </div>
+  </div>
+
+  <div id="speakerPanel">
+    <img src="assets/img/speaker.png" class="speaker" />
+  </div>
+
+  <!--add crossorigin="" for eqalizer-->
+  <audio volume="{{volume}}"
+         autoplay
+         preload="auto"
+         src="{{selectedURL}}"
+         (playing)="onPlaying($event)"
+         (pause)="onStopped($event)"
+         (ended)="onStopped($event)"
+         (suspend)="onStopped($event)"
+         (waiting)="onStopped($event)"></audio>
+
+</div>
+

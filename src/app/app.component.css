@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Anton|Ewert|Niconne&display=swap');
+
+.scaleHolder {
+  border-radius: 20px;
+  height: 190px;
+  background: #000;
+  vertical-align: top;
+  padding: 10px;
+  height: 230px;
+  margin-top: 1%;
+  margin-left: 1%;
+  -webkit-box-shadow: 10px 10px 32px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 32px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 32px 0px rgba(0, 0, 0, 0.75);
+}
+
+.scale {
+  background: #350e0e;
+  height: 100%;
+}
+
+.dial {
+  color: #c9fbf1;
+  padding: 10px;
+}
+
+.stationsList {
+  height: 155px;
+}
+
+.station {
+  padding: 2px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Lato';
+  max-width: 100px;
+  width: 100px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+
+.stationLanguage {
+  width: 50px;
+  color: yellow;
+  font-family: 'Anton';
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.languageRow {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px;
+  margin-top: 12px;
+}
+
+#needle {
+  background: gold;
+  padding: 1px;
+  position: absolute;
+  height: 156px;
+  top: 88px;
+  /*left: 342px;*/
+}
+
+.jogdial {
+  display: inline-block;
+}
+
+#jog_dial_example {
+  left: 17%;
+  width: 260px;
+  height: 260px;
+  margin: 10px auto;
+  background: url('https://www.cssscript.com/demo/dial-knob-jogdial/base_one_bg.png');
+  background-repeat: none;
+}
+
+  #jog_dial_example #jog_dial_example_knob {
+    background: url('https://www.cssscript.com/demo/dial-knob-jogdial/base_one_knob.png');
+  }
+
+#jog_dial_example_meter {
+  width: 200px;
+  height: 10px;
+  margin: 20px auto 30px;
+  background: #999;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+  #jog_dial_example_meter div {
+    position: relative;
+    width: 0;
+    height: 100%;
+    background: #80e93a;
+  }
+
+/* Range */
+input[type="range"] {
+  background-image: -webkit-linear-gradient(left, hsla(0,0%,100%,.1) 45%, transparent 45%), -webkit-linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), -webkit-linear-gradient(left, #f66, #6cf);
+  background-size: 3px 3px, 100% 100%, 100% 100%;
+  border-radius: 25px;
+  box-shadow: inset 0 1px 4px hsla(0,0%,0%,.5), inset 0 0 10px hsla(0,0%,0%,.5), 0 0 0 1px hsla(0,0%,0%,.1), 0 -1px 2px 1px hsla(0,0%,0%,.25), 0 2px 2px 1px hsla(0,0%,100%,.5), 0 -2px 10px 2px hsla(0,0%,100%,.75), 0 2px 10px 2px hsla(0,0%,0%,.25);
+  cursor: ew-resize;
+  height: 25px;
+  position: relative;
+  width: 350px;
+  -webkit-appearance: none;
+  -webkit-transition: .15s;
+  outline: none;
+}
+
+  input[type="range"]::-webkit-slider-thumb {
+    background-image: url(src/assets/img/slider.png);
+    content: '';
+    display: block;
+    height: 25px;
+    left: 0;
+    position: relative;
+    top: 10px;
+    width: 45px;
+    -webkit-appearance: none;
+  }
+
+#sliderPanel {
+  margin-left: 1%
+}
+
+.labelText {
+  font-family: 'Anton';
+  text-transform: capitalize;
+  text-align: left;
+  display: inline-block;
+}
+
+.volumeLabel {
+  margin-bottom: 5px;
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.controlHolder {
+  margin-bottom: 20px;
+}
+
+#controlPanel {
+  display: inline-block;
+  width: 400px;
+  margin-left: 4%;
+}
+
+.tuningLabel {
+  margin-top: 25px;
+}
+
+#speakerPanel {
+  display: inline-block;
+  text-align: right;
+}
+
+.speaker {
+  width: 430px;
+  margin-left: 10%;
+  border-radius: 217px;
+  box-shadow: inset 0 1px 4px hsla(0,0%,0%,.5), inset 0 0 10px hsla(0,0%,0%,.5), 0 0 0 1px hsla(0,0%,0%,.1), 0 -1px 2px 1px hsla(0,0%,0%,.25), 0 2px 2px 1px hsla(0,0%,100%,.5), 0 -2px 10px 2px hsla(0,0%,100%,.75), 0 2px 10px 2px hsla(0,0%,0%,.25);
+}
+
+#brandingPanel {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+
+.logo {
+  font-family: Ewert;
+  margin-top: 20%;
+  text-align: center;
+  font-size: 3.7rem;
+}
+
+.logoText {
+  font-family: 'Niconne';
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+
+.helpInfo {
+  margin-top: -20px;
+  font-family: 'Segoe Ui';
+  padding: 60px;
+  text-align: justify;
+  font-size: 12px;
+}
+
+.indicatorHolder {
+  text-align: center;
+}
+
+.indicator {
+  height: 128px;
+  margin-top: -20px;
+}
